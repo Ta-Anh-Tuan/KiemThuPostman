@@ -1,16 +1,25 @@
 # Kiểm Thử Postman
 
-#API được chọn 
-API được chọn là Dog API, api cung cấp thông tin về các giống loài chó
+# API được chọn 
+API được chọn là HTTP Cats, api cung cấp hình ảnh mèo
 
-#Phân tích API
-API: https://dogapi.dog/api/v2/breeds
+# Phân tích API
+API: https://http.cat
 Phương thức: GET
-Tham số bắt buộc: id( key loài) và name(tên)
+Tham số bắt buộc: id (mã số hình ảnh)
 
-#Các trường hợp kiểm thử:
-GET: https://dogapi.dog/api/v2/breeds?id=4ddbe251-72af-495e-8e9d-869217e1d92a&name=Bouvier des Flandres
-Kết quả: Mã trạng thái 200 và tông tin Bouvier des Flandres
-![image](https://github.com/Ta-Anh-Tuan/KiemThuPostman/assets/96875304/ac6c304c-e81d-4440-86ce-e47f91adc4bb)
+# Các trường hợp kiểm thử:
+# TH1: truy vấn hợp lệ
+GET: https://http.cat/300
+Kết quả: Mã trạng thái 200 và ảnh tương ứng với id
+![image](https://github.com/Ta-Anh-Tuan/KiemThuPostman/assets/96875304/e47662d3-f6b7-4aab-b234-be9555bc0e6e)
 
 
+# TH2: truy vấn không hợp lệ
+GET: https://http.cat/none
+Kết quả: Mã trạng thái 404 và thông báo Not Found
+![image](https://github.com/Ta-Anh-Tuan/KiemThuPostman/assets/96875304/a8d4fcfd-7b62-4db1-a1e8-45c76d923cb0)
+
+# POST, PUT, DELETE
+Kết quả: Failed vì không được cấp phép
+![image](https://github.com/Ta-Anh-Tuan/KiemThuPostman/assets/96875304/c58411f0-c74c-406d-bac4-db4c184bd27d)
